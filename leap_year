@@ -1,0 +1,16 @@
+
+def is_leap_year(year):
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+        return True
+    else:
+        return False
+
+def leap_years_in_century(century):
+    start_year = century * 100 - 100
+    end_year = century * 100
+
+    print("Leap years in the ",century,"th century:")
+    for year in range(start_year, end_year):
+        if is_leap_year(year):
+            print(year)
+
